@@ -3,7 +3,7 @@
 function getProduct(){
     var data = getApi();
     var product = JSON.parse(data);
-    console.log(product);
+    //console.log(product);
     return product;    
 }
 
@@ -12,9 +12,11 @@ function getProduct(){
 function newProduct(id){
     generateBarcode(id);
     product = getProduct();
-    
-    if(findProduct(id,product)!=null){
-        console.log("vamos somar");
+    var indice = findProduct(id, product);
+
+    if (indice != null){        
+        addProduct(product[indice].id, product[indice].name, product[indice].price);
+
     }else{
         productNotFound();
     }
@@ -23,28 +25,47 @@ function newProduct(id){
 
 //Busca codigo de barra na api
 function findProduct(id,product){
-    
-    var result = product.find(obj => {
-        return obj.id === id;
-      });
-      
-      showProduct(result.id, result.name, result.price);    
-      return result;
+    var count;
+    for (var indice = 0; indice <= product.length; indice ++){
+
+        console.log("contador" + indice);
+        if (id == product[indice].id){
+            count = indice;
+            break;
+        }
+        else {
+            count = null;
+        }
+    }
+
+    console.log(count);
+    return count;
 }
 
 
 //Adiciona produto na lista
 function addProduct(id, name, price){
 
-    var inputProduct = document.createElement("div");
-    inputProduct.setAttribute("name", "product-"+id);
-    inputProduct.setAttribute("id", "product-"+id)
-    inputProduct.classList.add("product");
+    var idProduct = document.createElement("td");
+    idProduct.innerText = id;
+    
+    var nameProduct = document.createElement("td");
+    nameProduct.innerText = name;
+    
+    var priceProduct = document.createElement("td");
+    priceProduct.innerText = price;
+
+    var rowProduct = document.createElement("tr");
+    rowProduct.setAttribute("name", "product-"+id);
+    rowProduct.setAttribute("id", "product-"+id)
+    rowProduct.classList.add("product");
+    rowProduct.appendChild(nameProduct);
+    rowProduct.appendChild(priceProduct);
 
     var productList = document.getElementById("product-list");
-    productList.appendChild(inputProduct);
-
-
+    productList.appendChild(rowProduct);
+    
+    document.getElementById("input-barcode").reset;
 }
 
 
