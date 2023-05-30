@@ -1,0 +1,53 @@
+/* Adjust the body and container height */
+body {
+  min-height: 100vh;
+  background-color: #533B99;
+}
+
+/* Center content vertically */
+.d-flex {
+  align-items: center;
+}
+
+/* Style the app navigation */
+.app-nav {
+  padding: 10px;
+}
+
+/* Style the app content */
+.app-content {
+  padding: 20px;
+}
+
+.nav-link{
+  color: #FFFFFF;
+}
+
+#div-total-value{  
+  background-color: #FFFFFF;
+  height: 15vh;
+  border-radius: 10px;
+}
+
+/* Style buttons */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.table {
+  color: #FFFFFF;
+}
+
+/* Style headings */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #333;
+}
+
+h1{
+  font-size: 7vh;
+}

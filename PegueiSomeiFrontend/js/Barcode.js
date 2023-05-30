@@ -5,7 +5,7 @@ window.onload = function () {
 
 //Gera código de barras
 function generateBarcode(id){
-    JsBarcode("#produto1", id);
+    JsBarcode("#product1", id);
 }
 
 //Ouvir Codigo de Barras se tiver números válidos
