@@ -16,6 +16,7 @@ body {
 
 /* Style the app content */
 .app-content {
+  min-height: 90vh;
   padding: 20px;
 }
 
@@ -39,6 +40,20 @@ body {
   color: #FFFFFF;
 }
 
+.table-overflow {  
+  min-height: 60vh;
+  max-height: 60vh;
+  overflow-x: auto;
+}
+
+.camera {
+  max-height: 100vh;
+}
+
+.drawingBuffer{
+  display: none;
+}
+
 /* Style headings */
 h1,
 h2,
@@ -49,5 +64,5 @@ h5 {
 }
 
 h1{
-  font-size: 7vh;
+  font-size: 5vh;
 }

@@ -4,14 +4,13 @@ function addValue(price){
     var totalValue = document.getElementById("total-value").innerHTML;   
 
     totalValue = parseFloat(totalValue) + parseFloat(price);
-    showTotalValue.innerText = totalValue;
+    showTotalValue.innerText = totalValue.toFixed(2);
 }
 
 function removeValue(price){        
     var showTotalValue = document.getElementById("total-value");
     var totalValue = document.getElementById("total-value").innerHTML;   
 
-    console.log(totalValue + " - " + price);
     totalValue = parseFloat(totalValue) - parseFloat(price);
 
     if(totalValue>0){

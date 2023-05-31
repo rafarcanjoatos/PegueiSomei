@@ -2,36 +2,36 @@
     {
         "id": 1,
         "name": "Arroz Urbano",
-        "price": 6
+        "price": "6.90"
     },
     {
         "id": 2,
         "name": "Feijão Giassi",
-        "price": 4
+        "price": "4.20"
     },
     {
         "id": 3,
         "name": "Carne de Sol",
-        "price": 56
+        "price": "56.67"
     },
     {
         "id": 4,
         "name": "Massa de Pastel",
-        "price": 10
+        "price": "10.98"
     },
     {
         "id": 5,
         "name": "bolacha Trakinas",
-        "price": 3
+        "price": "3.10"
     },
     {
         "id": 6,
         "name": "Chocolate Nestle",
-        "price": 4
+        "price": "4.56"
     },
     {
         "id": 7,
         "name": "Farofa Pinduca",
-        "price": 5
+        "price": "5.99"
     }
 ]

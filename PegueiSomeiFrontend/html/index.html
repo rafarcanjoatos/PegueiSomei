@@ -32,32 +32,62 @@
   
   <div name="app-content" id="app-content" class="app-content">
     <div name="container" id="container" class="container">
-    
-      <!-- Bloco da soma -->      
-      <div name="div-total-value" id="div-total-value" class="row d-flex justify-content-center"> 
-          <h1 name="total-value" id="total-value" class="text-center">0.00</h1>
+      
+      <!-- Lista de produtos -->
+      <div name="div-table" id="div-table" class="table-overflow">
+        <table name="product-table" id="product-table" class="table p-2">
+          <thead>
+            <tr>
+              <th scope="col-2">Id</th>
+              <th scope="col-5">Nome</th>
+              <th scope="col-3">Preço</th>
+              <th scope="col-2"></th>
+            </tr>
+          </thead>
+          <tbody name="product-tbody" id="product-tbody">
+          </tbody>
+        </table>
       </div>
 
-      <!-- Lista de produtos -->
-      <table name="product-table" id="product-table" class="table p-2">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Preço</th>
-            <th scope="col">Remover</th>
-          </tr>
-        </thead>
-        <tbody name="product-tbody" id="product-tbody">
-        </tbody>
-      </table>
+
+      <!-- Bloco da soma -->      
+      <div name="div-total-value" id="div-total-value" class="row d-flex m-3 justify-content-center"> 
+        <h1 name="mask" id="mask" class="col-2">R$</h1>  
+        <h1 name="total-value" id="total-value" class="col">0.00</h1>
+      </div>
+      
 
       <!-- Bloco do Código de Barras -->      
+      <div name="div-barcode" id="div-barcode" class="row d-flex p-3 justify-content-center">     
+        <button type="button" name="start-camera" id="start-camera" class="col btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCamera" onclick="startCamera()">Scanner</button>
+        <button type="button" class="col btn btn-primary" onclick="newProduct(3)">Teste</button>        
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modalCamera" tabindex="-1" aria-labelledby="modalCameraLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalCameraLabel">Escaneie o código de barras</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div name="camera" id="camera" class="camera"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" name="stop-camera" id="stop-camera"  class="btn btn-secondary" data-bs-dismiss="modal" onclick="stopCamera()">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco do Teste Código de Barras
       <div name="div-barcode" id="div-barcode" class="row d-flex justify-content-center"></div>
+          
           <svg id="product1" class="col-md-12 p-2"></svg>  
           <input type="number" name="input-barcode" id="input-barcode" class="col-md-8 p-2 form-control"/>
       </div>
-    </div>
+    </div> -->
   </div>
 
   
@@ -66,8 +96,10 @@
   <script src="../js/Product.js"></script>
   <script src="../js/Shopping.js"></script>
   <script src="../js/Barcode.js"></script>
+  <script src="../js/Quagga.js" type="module"></script>
   <script src="../js/App.js"></script>
-  <script src="../lib/JsBarcode.all.min.js"></script> 
+  <script src="../lib/JsBarcode.all.min.js"></script>
+  <script src="../lib/quagga.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
  
 </body>

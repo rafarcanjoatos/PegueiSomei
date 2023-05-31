@@ -1,19 +1,12 @@
-//Busca produto na API
-function getProduct(){
-    var data = getApi();
-    var product = JSON.parse(data);
-    //console.log(product);
-    return product;    
-}
-
-
 //Quando usuario adiciona novo produto
 function newProduct(id){
-    generateBarcode(id);
+    //generateBarcode(id);
     product = getProduct();
     var indice = findProduct(id, product);
-
-    if (indice != null){        
+    let executada = false;
+    
+    if ((indice != null)&&(!executada)){        
+        executada = true;
         addProduct(product[indice].id, product[indice].name, product[indice].price);
 
     }else{
@@ -21,6 +14,13 @@ function newProduct(id){
     }
 }
 
+
+//Busca produto na API
+function getProduct(){
+    var data = getApi();
+    var product = JSON.parse(data);
+    return product;    
+}
 
 //Busca codigo de barra na api
 function findProduct(id,product){
@@ -50,7 +50,7 @@ function addProduct(id, name, price){
     var nameProduct = document.createElement("td");
     var priceProduct = document.createElement("td");
     var removeProduct = document.createElement("td");
-        var iconRemoveProduct = document.createElement("button");
+        var iconRemoveProduct = document.createElement("div");
 
     //Adiciona informações do produto a cada coluna
     idProduct.innerText = id;    
@@ -58,7 +58,7 @@ function addProduct(id, name, price){
     priceProduct.innerText = price;
         priceProduct.setAttribute("id", "price")
     removeProduct.appendChild(iconRemoveProduct);
-        iconRemoveProduct.setAttribute("class", "bi bi-x-square-fill");
+        iconRemoveProduct.setAttribute("class", "bi bi-x-circle-fill text-danger");
         iconRemoveProduct.setAttribute("id", price);
         iconRemoveProduct.setAttribute("onclick","removeProduct(event)");
 
@@ -80,9 +80,6 @@ function addProduct(id, name, price){
 
     //Somar valor
     addValue(price);
-    
-    //Limpa código de barras
-    document.getElementById("input-barcode").innerHTML = "";
 }
 
 
@@ -91,7 +88,6 @@ function removeProduct(event){
     var price = event.target;
     var target = event.target.parentNode.parentNode;
     target.remove();
-
 
     //função que remove valor da soma
     removeValue(price.id);
