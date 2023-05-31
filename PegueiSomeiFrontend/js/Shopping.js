@@ -14,7 +14,7 @@ function removeValue(price){
     totalValue = parseFloat(totalValue) - parseFloat(price);
 
     if(totalValue>0){
-        showTotalValue.innerText = totalValue;
+        showTotalValue.innerText = totalValue.toFixed(2);
     }else{
         showTotalValue.innerText = "0.00";
     }
