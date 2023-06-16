@@ -176,13 +176,13 @@ function showNewProductInShoppingList(productIndex){
     qtdProduct.innerText = shoppingList[productIndex][3];
         qtdProduct.setAttribute("id", "qtdProduct"+shoppingList[productIndex][0]);
     moreProduct.appendChild(iconMoreProduct);
-        iconMoreProduct.setAttribute("class", "bi bi-plus text-danger");
+        iconMoreProduct.setAttribute("class", "bi bi-plus-lg text-warning");
         iconMoreProduct.setAttribute("onclick","addOneProductToShoppingList(event)");
     lessProduct.appendChild(iconLessProduct);
-        iconLessProduct.setAttribute("class", "bi bi-dash text-danger");
+        iconLessProduct.setAttribute("class", "bi bi-dash-lg text-warning");
         iconLessProduct.setAttribute("onclick","removeOneProductOfShoppingList(event)");
     removeProduct.appendChild(iconRemoveProduct);
-        iconRemoveProduct.setAttribute("class", "bi bi-x text-danger");
+        iconRemoveProduct.setAttribute("class", "bi bi-x-lg text-warning");
         iconRemoveProduct.setAttribute("onclick","removeProductOfShoppingList(event)");
 
     //Cria a linha do produto e adiciona as classes

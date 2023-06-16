@@ -12,12 +12,17 @@ body {
 /* Style the app navigation */
 .app-nav {
   padding: 10px;
+  max-height: 20vh;
 }
 
 /* Style the app content */
 .app-content {
   min-height: 90vh;
   padding: 20px;
+}
+
+#img-logo {
+  max-height: 10vh;
 }
 
 .nav-link{
@@ -42,8 +47,8 @@ body {
 }
 
 .table-overflow {  
-  min-height: 60vh;
-  max-height: 60vh;
+  min-height: 40vh;
+  max-height: 40vh;
   overflow-x: auto;
 }
 

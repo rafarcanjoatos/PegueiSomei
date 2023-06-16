@@ -19,14 +19,23 @@
   
   <nav class="app-nav">    
     <div name="container" id="container" class="container">
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Minhas Compras</a>
-        </li>
-      </ul>
+      <div name="div-menu" id="div-menu" class="row d-flex justify-content-center">  
+        <div class="col">
+        </div>
+        <div name="logo" class="col-6">
+          <img src="img/PEGUEISOMEI.png" id="img-logo" class="img-fluid mx-auto d-block" alt="Logo do produto">
+        </div>
+        <div class="col">
+          <!-- <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Minhas Compras</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
     </div>
   </nav>
   
@@ -54,7 +63,7 @@
 
 
       <!-- Bloco da soma -->      
-      <div name="div-total-value" id="div-total-value" class="row d-flex m-3 justify-content-center"> 
+      <div name="div-total-value" id="div-total-value" class="row d-flex m-3 p-2 justify-content-center"> 
         <h1 name="mask" id="mask" class="col-2">R$</h1>  
         <h1 name="total-value" id="total-value" class="col">0.00</h1>
       </div>
