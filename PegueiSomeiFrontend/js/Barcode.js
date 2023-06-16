@@ -15,7 +15,7 @@ var buttonKeyboard = addEventListener("keyup", userAction);
 function userAction (event){    
     if(validChars.find(element => element == event.key) != null){
         var id = document.getElementById("input-barcode").value;
-        newProduct(id);
+        scanProduct(id);
     }    
 }
 
@@ -59,7 +59,7 @@ function startCamera(){
         if (contador == 0){
             contador ++;
             var id = data.codeResult.code;
-            newProduct(id);              
+            scanProduct(id);              
         }
 
         Quagga.stop();

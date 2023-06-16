@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="css/index.css">
 
   <!-- Title -->
   <title>Peguei Somei</title>
@@ -39,9 +39,12 @@
           <thead>
             <tr>
               <th scope="col-2">Id</th>
-              <th scope="col-5">Nome</th>
+              <th scope="col-6">Nome</th>
               <th scope="col-3">Preço</th>
-              <th scope="col-2"></th>
+              <th scope="col-3">Qtd</th>
+              <th scope="col-1"></th>
+              <th scope="col-1"></th>
+              <th scope="col-1"></th>
             </tr>
           </thead>
           <tbody name="product-tbody" id="product-tbody">
@@ -60,7 +63,21 @@
       <!-- Bloco do Código de Barras -->      
       <div name="div-barcode" id="div-barcode" class="row d-flex p-3 justify-content-center">     
         <button type="button" name="start-camera" id="start-camera" class="col btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCamera" onclick="startCamera()">Scanner</button>
-        <button type="button" class="col btn btn-primary" onclick="newProduct(3)">Teste</button>        
+        <button type="button" class="col btn btn-primary" onclick="scanProduct(10)">Teste Erro</button>  
+      </div>
+
+      <!-- Bloco do Código de Barras -->      
+      <div name="div-barcode" id="div-barcode" class="row d-flex p-3 justify-content-center">     
+        <button type="button" class="col btn btn-primary" onclick="scanProduct(1)">Arroz</button>
+        <button type="button" class="col btn btn-primary" onclick="scanProduct(2)">Feijão</button>
+        <button type="button" class="col btn btn-primary" onclick="scanProduct(3)">Trakinas</button> 
+      </div>
+
+      <!-- Bloco do Código de Barras -->      
+      <div name="div-barcode" id="div-barcode" class="row d-flex p-3 justify-content-center">     
+        <button type="button" class="col btn btn-primary" onclick="scanProduct(4)">Pastel</button>
+        <button type="button" class="col btn btn-primary" onclick="scanProduct(5)">Trakinas</button>
+        <button type="button" class="col btn btn-primary" onclick="scanProduct(6)">Chocolate</button> 
       </div>
 
       <!-- Modal -->
@@ -92,14 +109,13 @@
 
   
   <!-- Javascript -->
-  <script src="../js/Controller.js"></script>
-  <script src="../js/Product.js"></script>
-  <script src="../js/Shopping.js"></script>
-  <script src="../js/Barcode.js"></script>
-  <script src="../js/Quagga.js" type="module"></script>
-  <script src="../js/App.js"></script>
-  <script src="../lib/JsBarcode.all.min.js"></script>
-  <script src="../lib/quagga.min.js"></script>
+  <script src="js/Controller.js"></script>
+  <script src="js/Product.js"></script>
+  <script src="js/Shopping.js"></script>
+  <script src="js/Barcode.js"></script>
+  <script src="js/App.js"></script>
+  <script src="lib/JsBarcode.all.min.js"></script>
+  <script src="lib/quagga.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
  
 </body>
