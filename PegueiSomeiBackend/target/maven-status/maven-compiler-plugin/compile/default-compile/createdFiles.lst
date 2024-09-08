@@ -1,0 +1,6 @@
+com\example\pegueisomei\product\ProductRepository.class
+com\example\pegueisomei\controller\ProductController.class
+com\example\pegueisomei\product\ProductResponseDTO.class
+com\example\pegueisomei\PegueiSomeiApplication.class
+com\example\pegueisomei\product\Product.class
+com\example\pegueisomei\product\ProductRequestDTO.class
